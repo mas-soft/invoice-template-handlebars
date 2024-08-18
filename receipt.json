@@ -1,0 +1,359 @@
+{
+    "fontSize": 24,
+    "width": 384,
+    "elements": [
+      {
+        "tag": "text",
+        "value": "{{company_name}}",
+        "fontSize": 25
+      },
+      {
+        "tag": "text",
+        "value": "فرع  {{branche}}",
+        "fontSize": 25
+      },
+      {
+        "tag": "space",
+        "fontSize": 5
+      },
+      {
+        "tag": "text",
+        "value": "فاتورة مياة محصلة",
+        "storke": 1,
+        "invert": true,
+        "fontSize": 33
+      },
+      {
+        "tag": "space",
+        "fontSize": 5
+      },
+      {
+        "tag": "text",
+        "value": "الاسم\n {{tent_name}}",
+        "fontSize": 26
+      },
+      {
+        "tag": "text",
+        "value": "العنوان ",
+        "textAlign": "center"
+      },
+      {
+        "tag": "space",
+        "fontSize": 5
+      },
+      {
+        "tag": "text",
+        "value": "{{ua_adress1}} ",
+        "textAlign": "center",
+        "fontSize": 25
+      },
+      {
+        "tag": "space",
+        "fontSize": 5
+      },
+      {
+        "tag": "line",
+        "stroke": 2
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": "فترة المحاسبة\n {{date bilng_date}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "منطقة\n {{book_no}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "رقم الحساب\n {{bill_custkey}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "space",
+        "fontSize": 5
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": "رقم الاشتراك\n {{old_key}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": "ط محاسبة\n {{calc_type}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "النشاط\n {{description}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "ع وحدات \n {{no_units}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "line",
+        "stroke": 2
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": " استهلاك \n {{sum s_consump 0}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "قراءة سابقة\n {{sum s_pr_reading 0}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "قراءة حالية  \n {{sum s_cr_reading 0}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "space",
+        "fontSize": 2
+      },
+      {
+        "tag": "line",
+        "stroke": 2
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": "ج تنظيمي\n {{sum tanzeem_amt 0}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "ق صرف\n {{sum sewer_amt 0}}",
+            "width": 128
+          },
+          {
+            "tag": "text",
+            "value": "ق مياه\n {{sum water_amt 0}}",
+            "width": 128
+          }
+        ]
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": "د العقد\n {{contract_amt}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": "فرق تقريب \n {{round_amt}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "ضرائب\n {{tax_amt}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "استدامة\n {{basic_amt}}",
+            "width": 128
+          }
+        ]
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": " اخرى \n  {{ math cl_blnce "-" (sum  other_amt5 other_amt4 other_amt3 other_amt2 other_amt1 other_amt1 installs_amt tanzeem_amt basic_amt tax_amt round_amt sewer_amt water_amt) }}",
+            "width": {{math 8 "*" 24}}
+          },
+          {
+            "tag": "text",
+            "value": "ق.متاخرات\n {{sum installs_amt 0}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": "قسط. ف. س \n {{sum other_amt5 0}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": " قسط تراكم\n {{sum other_amt4 0}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": " قسط وصلة\n {{sum other_amt 0}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": " اتفاقية تراكم \n {{other_amt1}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "خ مياه تراكم\n {{other_amt2}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "خ صرف تراكم\n {{other_amt3}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": " أتفاقية فحص عداد \n {{meter_man_amt}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "line",
+        "stroke": 5
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": "{{cl_blnce}} جنيهاً",
+            "width": {{math 8 "*" 20}}
+          },
+          {
+            "tag": "text",
+            "value": " ",
+            "width": {{math 8 "*" 8}}
+          },
+          {
+            "tag": "text",
+            "value": "قيمة الفاتورة",
+            "width": {{math 8 "*" 20}}
+          }
+        ]
+      },
+      {
+        "tag": "space",
+        "fontSize": 1
+      },
+      {
+        "tag": "text",
+        "value": "{{cl_blnce_word}}"
+      },
+      {
+        "tag": "space",
+        "fontSize": 1
+      },
+      {
+        "tag": "line",
+        "stroke": 2
+      },
+      {
+        "tag": "group",
+        "elements": [
+          {
+            "tag": "text",
+            "value": " متبقى \n {{sum reminder_amount 0}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "دفع سابق\n {{sum collected_amount 0}}",
+            "width": {{math 8 "*" 16}}
+          },
+          {
+            "tag": "text",
+            "value": "دفع حالى\n {{sum amount 0}}",
+            "width": {{math 8 "*" 16}}
+          }
+        ]
+      },
+      {
+        "tag": "line",
+        "stroke": 2
+      },
+      {
+        "tag": "text",
+        "value": "{{issue_name}}",
+        "textAlign": "center",
+        "fontSize": 24
+      },
+      {
+        "tag": "space",
+        "fontSize": 5
+      },
+      {
+        "tag": "text",
+        "value": "{{issue_date}}",
+        "textAlign": "center",
+        "fontSize": 24
+      },
+      {
+        "tag": "space",
+        "fontSize": 5
+      },
+      {
+        "tag": "text",
+        "value": " رقم إصدار التقرير (1.0.2)",
+        "fontSize": 12
+    },	
+      {
+        "tag": "line",
+        "stroke": 2
+      },
+      {
+        "tag": "text",
+        "value": "{{company_name}}",
+        "fontSize": 24,
+        "textAlign": "center"
+      }
+    ]
+  }
